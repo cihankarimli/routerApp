@@ -7,6 +7,9 @@ export const car = [
     brand: "Changan",
     model: "Deepal S05",
     year: 2024,
+    phone: "+994 55 555 55 55",
+    city: "Baku",
+    engine: "1.5L",
   },
   {
     id: 2,
@@ -16,6 +19,9 @@ export const car = [
     brand: "Changan",
     model: "Qiyuan A05",
     year: 2024,
+    phone: "+994 55 555 55 55",
+    city: "Ganja",
+    engine: "1.5L",
   },
   {
     id: 3,
@@ -25,6 +31,9 @@ export const car = [
     brand: "Changan",
     model: "Qiyuan A05",
     year: 2024,
+    phone: "+994 55 555 55 55",
+    city: "Sumgait",
+    engine: "1.5L",
   },
   {
     id: 4,
@@ -34,6 +43,9 @@ export const car = [
     brand: "BMW",
     model: "M5",
     year: 2015,
+    phone: "+994 55 555 55 55",
+    city: "Lankaran",
+    engine: "4.4L",
   },
   {
     id: 5,
@@ -43,6 +55,9 @@ export const car = [
     brand: "Toyota",
     model: "Camry",
     year: 2024,
+    phone: "+994 55 555 55 55",
+    city: "Baku",
+    engine: "2.5L",
   },
   {
     id: 6,
@@ -52,6 +67,9 @@ export const car = [
     brand: "LADA (VAZ)",
     model: "Priora",
     year: 2014,
+    phone: "+994 55 555 55 55",
+    city: "Ganja",
+    engine: "1.6L",
   },
   {
     id: 7,
@@ -61,6 +79,9 @@ export const car = [
     brand: "Hyundai",
     model: "Elantra",
     year: 2013,
+    phone: "+994 55 555 55 55",
+    city: "Sumgait",
+    engine: "1.8L",
   },
   {
     id: 8,
@@ -70,6 +91,9 @@ export const car = [
     brand: "BMW",
     model: "X5",
     year: 2015,
+    phone: "+994 55 555 55 55",
+    city: "Baku",
+    engine: "3.0L",
   },
   {
     id: 9,
@@ -79,6 +103,9 @@ export const car = [
     brand: "BMW",
     model: "M5",
     year: 2015,
+    phone: "+994 55 555 55 55",
+    city: "Lankaran",
+    engine: "4.4L",
   },
   {
     id: 10,
@@ -88,6 +115,9 @@ export const car = [
     brand: "Toyota",
     model: "Camry",
     year: 2024,
+    phone: "+994 55 555 55 55",
+    city: "Baku",
+    engine: "2.5L",
   },
   {
     id: 11,
@@ -97,6 +127,9 @@ export const car = [
     brand: "LADA (VAZ)",
     model: "Priora",
     year: 2014,
+    phone: "+994 55 555 55 55",
+    city: "Ganja",
+    engine: "1.6L",
   },
   {
     id: 12,
@@ -106,5 +139,8 @@ export const car = [
     brand: "Hyundai",
     model: "Elantra",
     year: 2013,
+    phone: "+994 55 555 55 55",
+    city: "Sumgait",
+    engine: "1.8L",
   },
 ];
