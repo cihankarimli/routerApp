@@ -7,7 +7,6 @@ function Card({ car }) {
       <div className="card">
         <div
           onClick={() => navigate("/car-details/" + car.id)}
-          key={car.id}
           className="card-item"
         >
           <img src={car.img} alt={car.model} className="card-image" />
