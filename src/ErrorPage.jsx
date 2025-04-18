@@ -1,6 +1,6 @@
 import React from "react";
 
-function ErrorPAge() {
+function ErrorPage() {
   return (
     <>
       <div className="error">
@@ -10,4 +10,4 @@ function ErrorPAge() {
   );
 }
 
-export default ErrorPAge;
+export default ErrorPage;
