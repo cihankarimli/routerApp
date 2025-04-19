@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Filter from "../Filter";
 
 function Header() {
   return (
@@ -12,6 +13,7 @@ function Header() {
           <li>Contact</li>
           <li>About</li>
           <li>Profile</li>
+          <Filter />
         </ul>
       </nav>
     </div>
