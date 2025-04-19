@@ -1,33 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
 import { car } from "../data";
-const data = car;
+import AppContext from "../AppContext";
 
 function Cardwrapper() {
-  let selectedBrand;
-  useEffect(() => {
-    selectedBrand = JSON.stringify(localStorage.getItem("selectedBrand"));
-  }, [localStorage.getItem("selectedBrand")]);
+  const { brand } = useContext(AppContext);
 
-  const filteredData = data.filter((item) => item.brand === selectedBrand);
-
-  let renderedData = [];
-
-  function fillArray() {
-    data.map((currentCar) => {
-      currentCar.brand === selectedBrand ? renderedData.push(currentCar) : null;
-    });
-  }
-
-  fillArray();
-
-  console.log(renderedData);
+  const filteredCars = brand
+    ? brand === "all"
+      ? car
+      : car.filter((item) => item.brand === brand)
+    : car;
 
   return (
     <div className="card-wrapper">
-      {renderedData.length > 0
-        ? renderedData.map((car) => <Card key={car.id} car={car} />)
-        : data.map((car) => <Card key={car.id} car={car} />)}
+      {filteredCars.map((car) => (
+        <Card key={car.id} car={car} />
+      ))}
     </div>
   );
 }

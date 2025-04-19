@@ -1,31 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { car } from "../data";
-
-const data = car;
+import AppContext from "../AppContext";
 
 function Filter() {
   const filterData = [...new Set(car.map((item) => item.brand))];
-  const [filteredData, setFilteredData] = React.useState(data);
-  const [selectedBrand, setSelectedBrand] = React.useState("");
 
-  const filterToLocalStorage = (e) => {
-    e.preventDefault();
+  const { setBrand } = useContext(AppContext);
+
+  const handleChange = (e) => {
     const selectedBrand = e.target.value;
-    console.log(e.target.value);
-    setSelectedBrand(selectedBrand);
-    const filteredData = data.filter((item) => item.brand === selectedBrand);
-    setFilteredData(filteredData);
+    setBrand(selectedBrand);
     localStorage.setItem("selectedBrand", selectedBrand);
   };
-
   return (
     <>
-      <select id="" onChange={filterToLocalStorage}>
+      <select id="" onChange={handleChange}>
         {filterData.map((brand) => (
           <option key={brand} className="filter-option" value={brand}>
             {brand}
           </option>
         ))}
+        <option className="filter-option" value={"all"}>
+          All
+        </option>
       </select>
     </>
   );
