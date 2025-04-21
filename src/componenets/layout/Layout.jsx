@@ -7,7 +7,6 @@ function Layout() {
       <Header />
 
       <Outlet />
-      <footer>salamlar</footer>
     </>
   );
 }

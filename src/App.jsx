@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CarDetails from "./pages/CarDetails";
 import Layout from "./componenets/layout/Layout";
 import ErrorPage from "./ErrorPAge";
-import Filter from "./componenets/Filter";
 import AppProvider from "./AppProvider";
 function App() {
   return (
