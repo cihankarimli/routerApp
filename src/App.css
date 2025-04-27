@@ -373,189 +373,236 @@ a {
   color: inherit;
   text-decoration: none;
 }
-.error {
-  color: red;
-  display: flex;
-  font-size: larger;
-}
 .form-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  align-items: space-between;
 }
 
+/* Form layout */
 .form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
-.form-group {
-  display: flex;
-  flex-direction: column;
+.first-part-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+/* Form section styling */
+.form-section {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.form-group label {
-  margin-bottom: 8px;
+h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
   font-weight: 600;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Form controls */
+select,
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 14px;
 }
 
-.form-group select,
-.form-group input[type="text"],
-[type="number"] {
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
-  font-size: 14px;
+/* Dropdown styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px;
+  padding-right: 30px;
 }
 
+/* Radio button groups */
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Input with radio combination */
 .input-with-radio {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.radio-group {
-  display: flex;
-  gap: 10px;
+.input-with-radio input[type="number"],
+.input-with-radio input[type="text"] {
+  flex: 1;
 }
 
-.radio-group label {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 14px;
-}
-.submit {
-  background-color: #1e293b;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  display: flex;
-  margin: 0 auto;
-}
-.submit:hover {
-  background-color: #38bdf8;
-}
-.vaziyyeti-form {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.vaziyyeti-form h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.vaziyyeti-form h3 {
-  font-size: 18px;
-  margin: 20px 0 15px;
-  color: #2c3e50;
-}
-
-.form-section {
-  margin-bottom: 25px;
-}
-
+/* Checkbox groups */
 .checkbox-group {
   margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"] {
   margin-right: 10px;
+  margin-top: 5px;
 }
 
 .checkbox-group strong {
-  font-weight: bold;
-  margin-bottom: 5px;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .checkbox-group p {
-  margin: 5px 0 0 25px;
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
+  margin-top: 4px;
 }
 
-.number-selector {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-.number-btn {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.number-btn:hover {
-  background-color: #f5f5f5;
-}
-
-.additional-info {
-  width: 100%;
-  min-height: 100px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  resize: vertical;
-}
-
+/* Equipment grid */
 .equipment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-}
-
-.equipment-item {
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 4px;
 }
 
 .equipment-item label {
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 
 .equipment-item input[type="checkbox"] {
   margin-right: 8px;
 }
 
+/* Number selector for seats */
+.number-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.number-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number-btn:hover {
+  background: #e8e8e8;
+}
+
+.number-btn.active {
+  background: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+/* Additional info textarea */
+.additional-info {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  resize: vertical;
+}
+
+/* Dividers */
 .divider {
+  margin: 30px 0;
   border: none;
   border-top: 1px solid #eee;
-  margin: 25px 0;
+}
+
+/* Error messages */
+.error {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Submit button */
+.submit {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px 25px;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.submit:hover {
+  background-color: #172b6c;
+}
+
+/* Required field styling */
+label::after {
+  content: " *";
+  color: #d32f2f;
+}
+
+label:not([for])::after {
+  content: "";
+}
+
+/* Condition section styling */
+.vaziyyeti-form {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}
+
+.vaziyyeti-form h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Red error text for validation */
+.vaziyyeti-form .error-text {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-top: 5px;
 }
