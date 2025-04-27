@@ -283,9 +283,59 @@ function MainForm() {
         </div>
         <SecondPartForm />
 
-        <button type="submit" className="submit">
-          Submit
-        </button>
+        <div className="contact">
+          <h3>Elaqe</h3>
+
+          <div className="name">
+            <label>Ad</label>
+            <input
+              type="text"
+              placeholder="Adınızı daxil edin"
+              className="name-input"
+              {...register("name", {
+                required: "Adınızı daxil edin",
+                minLength: {
+                  value: 2,
+                  message: "Adınız ən azı 2 simvoldan ibarət olmalıdır",
+                },
+              })}
+            />
+            {errors.name && <p className="error">{errors.name.message}</p>}
+          </div>
+          <div className="email">
+            <label>Email</label>
+            <input
+              type="text"
+              {...register("email", {
+                required: "Poct hesabivizi daxil edin",
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: "Daxil etdiyiniz email duzgun deyil",
+                },
+              })}
+            />
+            {errors.email && <p className="error">{errors.email.message}</p>}
+          </div>
+
+          <div className="phone">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              placeholder="000-000-00-00"
+              className="phone-input"
+              {...register("phone", {
+                required: "Telefon nomresini daxil edin",
+                pattern: {
+                  value: /^\d{3}\-\d{3}-\d{2}-\d{2}$/,
+                  message: "Nomre formati duzgun deyil",
+                },
+              })}
+            />
+            {errors.phone && <p className="error">{errors.phone.message}</p>}
+          </div>
+        </div>
+
+        <input className="submit" type="submit" />
       </form>
     </div>
   );

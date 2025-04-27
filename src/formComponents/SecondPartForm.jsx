@@ -51,13 +51,6 @@ function SecondPartForm() {
                 </p>
               </label>
             </div>
-          </div>
-
-          <hr className="divider" />
-
-          <div className="form-section">
-            <h3>Yerlerin sayı</h3>
-
             <div className="checkbox-group">
               <label>
                 <input type="checkbox" name="gezali-hisseler" />
@@ -67,13 +60,49 @@ function SecondPartForm() {
                 </p>
               </label>
             </div>
+          </div>
 
+          <hr className="divider" />
+
+          <h3>Yerlerin sayı</h3>
+          <div className="form-section">
             <div className="number-selector">
-              {[1, 2, 3, 4, 5, 6, 7, "8+"].map((num) => (
-                <button key={num} className="number-btn">
-                  {num}
-                </button>
-              ))}
+              <label>
+                1
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                2
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                3
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                4
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                5
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                6
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                7
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                8+
+                <input type="radio" name="currency" />
+              </label>
+              <label>
+                Qeyd Olunmasin
+                <input type="radio" name="currency" defaultChecked />
+              </label>
             </div>
 
             <div className="checkbox-group">
