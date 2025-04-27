@@ -13,6 +13,9 @@ function Header() {
           <li>Contact</li>
           <li>About</li>
           <li>Profile</li>
+          <li className="form">
+            <Link to="/form">Form</Link>
+          </li>
           <Filter />
         </ul>
       </nav>
