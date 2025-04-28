@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { carMarkets } from "../FormData";
 
 function SecondPartForm() {
   const {
@@ -11,7 +12,6 @@ function SecondPartForm() {
   const onSubmit = (data) => {
     console.log(data);
   };
-  const carMarkets = ["America", "Deutschland", "Japan", "China", "Russia"];
 
   return (
     <>
