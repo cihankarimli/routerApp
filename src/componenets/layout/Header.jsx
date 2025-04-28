@@ -7,16 +7,24 @@ function Header() {
     <div>
       <nav>
         <ul>
-          <li className="home-nav">
-            <Link to="/">Home</Link>
-          </li>
-          <li>Contact</li>
-          <li>About</li>
-          <li>Profile</li>
-          <li className="form">
-            <Link to="/form">Form</Link>
-          </li>
-          <Filter />
+          <div className="nav-link">
+            <li className="home-nav">
+              <Link to="/">Home</Link>
+            </li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Profile</li>
+            <li>
+              <Filter />
+            </li>
+          </div>
+          <div className="form-button">
+            <li className="form">
+              <Link to="/form">
+                <button className="form-link-button">Create Add</button>
+              </Link>
+            </li>
+          </div>
         </ul>
       </nav>
     </div>

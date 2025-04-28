@@ -14,15 +14,15 @@ function Filter() {
   };
   return (
     <>
-      <select id="" onChange={handleChange}>
+      <select id="filter-car" onChange={handleChange}>
+        <option className="filter-option" value={"all"}>
+          All
+        </option>
         {filterData.map((brand) => (
           <option key={brand} className="filter-option" value={brand}>
             {brand}
           </option>
         ))}
-        <option className="filter-option" value={"all"}>
-          All
-        </option>
       </select>
     </>
   );
