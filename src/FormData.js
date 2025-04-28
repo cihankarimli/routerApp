@@ -1,4 +1,4 @@
-export const carBrands = [
+const carBrands = [
   { id: 1, name: "Toyota" },
   { id: 2, name: "Honda" },
   { id: 3, name: "Ford" },
@@ -10,13 +10,13 @@ export const carBrands = [
   { id: 9, name: "Subaru" },
   { id: 10, name: "Mazda" },
 ];
-export const fuelTypes = [`Petrol`, `Diesel`, `Electric`, `Hybrid`];
-export const carGears = [
+const fuelTypes = [`Petrol`, `Diesel`, `Electric`, `Hybrid`];
+const carGears = [
   { id: 1, name: "Manual" },
   { id: 2, name: "Automatic" },
   { id: 3, name: "Semi-Automatic" },
 ];
-export const carTypesRoofs = [
+const carTypesRoofs = [
   "sedan",
   "hatchback",
   "coupe",
@@ -24,13 +24,13 @@ export const carTypesRoofs = [
   "SUV",
   "pickup truck",
 ];
-export const gearBoxes = [
+const gearBoxes = [
   "5-speed manual",
   "6-speed manual",
   "7-speed automatic",
   "8-speed automatic",
 ];
-export const carYear = [
+const carYear = [
   "2020",
   "2019",
   "2018",
@@ -42,7 +42,7 @@ export const carYear = [
   "2012",
   "2011",
 ];
-export const engineVolume = [
+const engineVolume = [
   "1.0L",
   "1.2L",
   "1.4L",
@@ -54,7 +54,7 @@ export const engineVolume = [
   "2.5L",
   "3.0L",
 ];
-export const carColors = [
+const carColors = [
   "Red",
   "Blue",
   "Green",
@@ -66,17 +66,23 @@ export const carColors = [
   "Orange",
   "Purple",
 ];
-export const carOwners = [
+const carOwners = [
   "First owner",
   "Second owner",
   "Third owner",
   "Fourth owner",
   "Fifth owner",
 ];
-export const carMarkets = [
-  "America",
-  "Deutschland",
-  "Japan",
-  "China",
-  "Russia",
-];
+const carMarkets = ["America", "Deutschland", "Japan", "China", "Russia"];
+export {
+  carBrands,
+  fuelTypes,
+  carGears,
+  carTypesRoofs,
+  gearBoxes,
+  carYear,
+  engineVolume,
+  carColors,
+  carOwners,
+  carMarkets,
+};

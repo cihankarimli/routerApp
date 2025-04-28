@@ -3,11 +3,7 @@ import { useForm } from "react-hook-form";
 import { carMarkets } from "../FormData";
 
 function SecondPartForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
