@@ -262,7 +262,7 @@ function MainForm() {
               {...register("phone", {
                 required: "Telefon nomresini daxil edin",
                 pattern: {
-                  value: /^\d{3}\-\d{3}-\d{2}-\d{2}$/,
+                  value: /^\d{3}\d{3}\d{2}\d{2}$/,
                   message: "Nomre formati duzgun deyil",
                 },
               })}
