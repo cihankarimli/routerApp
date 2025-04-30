@@ -32,7 +32,6 @@ export const FormSelect = ({ name, label, options, rules, required }) => {
   );
 };
 
-// Reusable Input Component
 export const FormInput = ({
   name,
   label,
@@ -64,7 +63,6 @@ export const FormInput = ({
   );
 };
 
-// Reusable Radio Group Component
 export const RadioGroup = ({ name, options, defaultValue }) => {
   const { control } = useFormContext();
 
@@ -92,7 +90,6 @@ export const RadioGroup = ({ name, options, defaultValue }) => {
   );
 };
 
-// Input with Radio Buttons Component
 export const InputWithRadio = ({
   inputName,
   inputType,
