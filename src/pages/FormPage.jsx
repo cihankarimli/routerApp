@@ -2,7 +2,7 @@ import React from "react";
 import MainForm from "../formComponents/MainForm";
 
 function FormPAge() {
-  const ExitForm = () => {
+  const exitForm = () => {
     window.location.href = "/";
   };
 
@@ -10,7 +10,7 @@ function FormPAge() {
     <>
       <div className="header-form">
         <h1>Form Page</h1>
-        <button onClick={ExitForm} className="form-exit">
+        <button onClick={exitForm} className="form-exit">
           Exit
         </button>
       </div>
