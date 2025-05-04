@@ -1,25 +1,44 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const getFavoriteCount = () => {
+  const favoriteCars = JSON.parse(localStorage.getItem("favoriteCars") || "[]");
+  return favoriteCars.length;
+};
+
 const initialState = {
-  value: 0,
+  count: getFavoriteCount(),
+  inputValue: "",
+  carCount: 0,
 };
 
 export const counterSlice = createSlice({
   name: "counter",
-  initialState: {
-    count: 0,
-    inputValue: "",
-  },
+  initialState,
   reducers: {
     increment: (state) => {
-      state.value += 1;
+      state.count += 1;
+    },
+    incrementCarCount: (state) => {
+      state.carCount += 1;
+    },
+    decrementCarCount: (state) => {
+      state.carCount -= 1;
     },
     decrement: (state) => {
-      state.value -= 1;
+      state.count -= 1;
+    },
+    setCount: (state, action) => {
+      state.count = action.payload;
     },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const {
+  increment,
+  decrement,
+  setCount,
+  incrementCarCount,
+  decrementCarCount,
+} = counterSlice.actions;
 
 export default counterSlice.reducer;

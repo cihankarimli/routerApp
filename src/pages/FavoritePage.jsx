@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+import { incrementCarCount } from "../counterSlice";
+import { useSelector } from "react-redux";
 
 function FavoritePage() {
   const [favoriteCars, setFavoriteCars] = useState([]);

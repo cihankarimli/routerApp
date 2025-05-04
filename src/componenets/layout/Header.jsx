@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const { count } = useSelector((state) => state.counter);
-  console.log(count);
 
   return (
     <div>
@@ -19,9 +18,9 @@ function Header() {
             <li>About</li>
             <li>Profile</li>
             <li>
-              <Link to="/favoritePage">
+              <Link className="link-favorite" to="/favoritePage">
                 FavoriteCar
-                <span>{count}</span>
+                <span className="car-number">{count}</span>
               </Link>
             </li>
             <li>
