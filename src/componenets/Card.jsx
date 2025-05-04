@@ -1,7 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { IoIosAdd } from "react-icons/io";
+import { increment } from "../counterSlice";
 function Card({ car }) {
   const navigate = useNavigate();
+  const addFavoriteButton = () => {
+    const favoriteCars = JSON.parse(localStorage.getItem("favoriteCars"));
+    const isCarInFavorites = favoriteCars.some(
+      (favoriteCar) => favoriteCar.id === car.id
+    );
+
+    if (!isCarInFavorites) {
+      favoriteCars.push(car);
+      localStorage.setItem("favoriteCars", JSON.stringify(favoriteCars));
+    }
+    increment();
+  };
   return (
     <div>
       <div className="card">
@@ -19,6 +33,9 @@ function Card({ car }) {
           </p>
         </div>
       </div>
+      <button onClick={addFavoriteButton} className="favorite-button">
+        <IoIosAdd />
+      </button>
     </div>
   );
 }
