@@ -18,12 +18,6 @@ export const counterSlice = createSlice({
     increment: (state) => {
       state.count += 1;
     },
-    incrementCarCount: (state) => {
-      state.carCount += 1;
-    },
-    decrementCarCount: (state) => {
-      state.carCount -= 1;
-    },
     decrement: (state) => {
       state.count -= 1;
     },
